@@ -30,4 +30,4 @@ for i in range(int(num)):
     subprocess.run(['git', 'push', '-u', 'origin', 'new-branch'])
     subprocess.run(['gh', 'pr', 'create', '-f'])
     subprocess.run(['gh', 'pr', 'merge', '--merge', '--delete-branch'])
-    sleep(30)
+    sleep(60)
