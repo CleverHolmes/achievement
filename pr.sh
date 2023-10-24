@@ -8,4 +8,4 @@ git commit --allow-empty -m "empty"
 git push -u origin branch
 gh pr create -f
 gh pr merge --merge --delete-branch
-sleep 40
+# sleep 40
