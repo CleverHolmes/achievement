@@ -5,7 +5,6 @@ git checkout -B branch
 git add .
 git commit --allow-empty -m "empty"
 git push -u origin branch
-git checkout master
 
 echo asdf
 
