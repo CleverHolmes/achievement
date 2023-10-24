@@ -12,11 +12,12 @@ repo = os.environ.get("repo")
 # subprocess.run(['git', 'init'])
 subprocess.run(['git', 'config', '--local', 'user.name', name])
 subprocess.run(['git', 'config', '--local', 'user.email', email])
-subprocess.run(['git', 'remote', 'add', 'origin', f'https://github.com/CleverHolmes/{repo}.git'])
 
 try:
     subprocess.check_output(['gh', 'repo', 'view', f'{name}/{repo}'])
+    subprocess.run(['git', 'remote', 'set-url', 'origin', f'https://github.com/CleverHolmes/{repo}.git'])
 except subprocess.CalledProcessError:
+    subprocess.run(['git', 'remote', 'add', 'origin', f'https://github.com/CleverHolmes/{repo}.git'])
     subprocess.run(['gh', 'repo', 'create', repo, '--public'])
     subprocess.run(['git', 'checkout', '-B', 'master'])
     subprocess.run(['git', 'add', '.'])
