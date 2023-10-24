@@ -6,9 +6,6 @@ git pull origin branch
 git add .
 git commit --allow-empty -m "empty"
 git push -u origin branch
-
-echo asdf
-
 gh pr create -f
 gh pr merge --merge --delete-branch
 sleep 40
