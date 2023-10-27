@@ -1,2 +1,7 @@
 venv
 start.sh
+build
+dist
+.env
+*.spec
+*.ico
