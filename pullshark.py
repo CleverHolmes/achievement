@@ -1,14 +1,11 @@
 import subprocess
-import os
-from dotenv import load_dotenv
 from time import sleep
 
-load_dotenv()
+name = input("Input your github user name: ")
+email = input("Input your github user email: ")
+repo = input("Input your github repository name: ")
+num = input("Input the numbers of pull request: ")
 
-name = os.environ.get("name")
-email = os.environ.get("email")
-repo = os.environ.get("repo")
-num = os.environ.get("num")
 
 subprocess.run(['git', 'config', '--local', 'user.name', name])
 subprocess.run(['git', 'config', '--local', 'user.email', email])
